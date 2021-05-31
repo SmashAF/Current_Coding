@@ -33,18 +33,18 @@ def comp(array1, array2):
 # print(converter(24))# 8.50)
 # print(converter(36))# 12.74)
 
-def nb_year(p0, percent, aug, p):#needs work
-    pop = p0
-    count = 0
+# def nb_year(p0, percent, aug, p):#needs work 26 May fixed
+#     pop = p0
+#     count = 0
     
     
-    if pop <= p:
-        pop = (p0 + (p0 * (percent/100)) + aug)
-        count += 1 
-        p0 = pop
+#     while pop <= p:
+#         pop = (p0 + (p0 * (percent/100)) + aug)
+#         count += 1 
+#         p0 = pop
     
         
-    else: return count
+#     return count
     
         
        
@@ -71,6 +71,69 @@ def nb_year(p0, percent, aug, p):#needs work
 # reel3 = ["Bell", "King", "Wild", "Bar", "Seven", "Jack", "Shell", "Cherry", "Queen", "Star"]
 # spin = [5, 4, 3]
 
+'''
+1. There are always exactly three reels
+
+2. Each reel has 10 different items.
+
+3. The three reel inputs may be different.
+
+4. The spin array represents the index of where the reels finish.
+
+5. The three spin inputs may be different
+
+6. Three of the same is worth more than two of the same
+
+7. Two of the same plus one "Wild" is double the score.
+
+8. No matching items returns 0.
+
+
+Item
+Three of the same
+Two of the same
+Two of the same plus one Wild
+Wild
+100
+10
+N/A
+Star
+90
+9
+18
+Bell
+80
+8
+16
+Shell
+70
+7
+14
+Seven
+60
+6
+12
+Cherry
+50
+5
+10
+Bar
+40
+4
+8
+King
+30
+3
+6
+Queen
+20
+2
+4
+Jack
+10
+1
+2
+'''
 # def fruit(reels, spin):
 #     landed = []
 #     for pick in reels:
@@ -120,9 +183,11 @@ def over_the_road(address, n):
 # print(over_the_road(3, 5))   # 8)
 # print(over_the_road(7, 11))  # 16)
 # print(over_the_road(23633656673, 310027696726)) # 596421736780)
+
+
 import re 
 from string import ascii_lowercase
-def alph_score(word):
+def alph_score(word): # 26 May should be good
     d = {let: int(index) for index, let in enumerate(ascii_lowercase, start=1)}
     
     score = 0

@@ -16,18 +16,19 @@ C=(F−32)⋅59
 '''
 
 def cels_to_fahr(temp_c):
-    return round((temp_c * 1.8) + 32)
+    return round((temp_c * (9/5)) + 32)
 
 # print (cels_to_fahr(10))      #50
 # print (cels_to_fahr(38))     #100
 # print (cels_to_fahr(-40))     #-40 
 
 def fahr_to_cels(temp_f):
-    return round((temp_f - 32) * .5556)
+    return ((temp_f - 32) * (5/9))
    
 # print (fahr_to_cels(50))      #10
 # print (fahr_to_cels(100))     #38
 # print (fahr_to_cels(-40))     #-40
+print (fahr_to_cels(0))     #-17.77777777777778
 '''
 Write a function called fast_fib which takes one parameter, n, which is the n-th term of the Fibonacci
 sequence. This is a classic problem to do recursively (learn more about recursion here  ), but the naive
@@ -716,16 +717,70 @@ def cut_the_ropes(lst):
 # print( cut_the_ropes([3, 3, 2, 9, 7]) ) # returns [5, 4, 2, 1])
 
 
+'''
+17 May
+'''
 
 
+'''
+Complete the bool_to_str function. This function will take in a boolean value 
+(True or False) and will return a string value. This function should return 
+'Yes' if the value is True and should return 'No' if the value is False.
+'''
+def bool_to_str(boolean):
+    pass
 
 
+'''
+Write a function less_than_limit which takes in two parameters. 
+The first parameter, called lst, is a list of numbers and the second, 
+called check, is a single number. This function should go through the 
+list of numbers and return True is all the numbers in lst are less than check, 
+but if any are bigger than check this function should return False.
+'''
+
+def less_than_limit(lst, check):
+    pass
 
 
+'''
+One of Pythons best features is now easily it can manipulate strings, 
+making it one of the best text manipulation languages. For this challenge,
+write a function called domain_name which takes in a string url for its parameter. 
+This function should read through the url and return just the domain name of the 
+website.
+'''
+def domain_name(str):
+    pass
+
+# print(domain_name("http://google.com")) # returns "google"
+# print(domain_name("http://google.co.jp")) # returns "google"
+# print(domain_name("https://www.cnet.com")) # returns "cnet"
+# print(domain_name("https://youtube.com")) # returns "youtube"
+# print(domain_name("http://github.com/carbonfive/raygun")) # returns "github"
+# print(domain_name("http://www.zombie-bites.com")) # returns "zombie-bites"
 
 
+'''
+This challenge will be an Object Oriented Programming challenge. These topics and 
+ideas are not required for the technical interview and are only briefly touched on 
+in the Further Studies section. These are written in hopes of helping you learn new 
+concepts and grow as programmers.
 
+For this challenge implement a stack data structure. A stack can be thought of as a 
+structure similar to a Singly Linked List (previously implemented here  but items can
+only be added to the beginning of the list. Stacks have two operations that can be 
+preformed on them. First is push which adds a new node to the head of the stack. 
+Second is pop which removes the first node and returns its value. Pop also moves 
+the head to the second item of the list. Learn more about stacks here. 
 
+This challenge will require the creation of two classes. First implement a node class. 
+The init should take in one parameter which is the value for that node, and create two 
+attributes, one called value which is thevalue of that node, and next which in initially s
+et to None. Second implement a stack class. The init should create one attribute called head. 
+The stack class will also need two methods. First is push which will take in a value and 
+add it to the top of the list. Second is pop which will remove the top node and return its value.
+'''
 
 
 
